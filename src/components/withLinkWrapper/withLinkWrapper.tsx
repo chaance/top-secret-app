@@ -1,20 +1,8 @@
 import React from 'react';
 import { Link } from '@reach/router';
-import { ThemeProps } from '../shared/theme';
+import { WrappedLinkProps } from './index';
 
-export interface WrappedLinkProps {
-  target?: string;
-  href?: string;
-  to?: string;
-  children: React.ReactNode;
-  disabled?: boolean;
-  isLoading?: boolean;
-  rel?: string;
-  buttonSize?: string;
-  theme: ThemeProps;
-}
-
-export default (Component: any, props: WrappedLinkProps) => {
+const withLinkWrapper = (Component: any, props: WrappedLinkProps) => {
   const {
     href,
     to,
@@ -57,3 +45,5 @@ export default (Component: any, props: WrappedLinkProps) => {
   }
   return button;
 };
+
+export default withLinkWrapper;

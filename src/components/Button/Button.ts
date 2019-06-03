@@ -1,19 +1,18 @@
-import wrapLinkComponent from '../../lib/wrapLinkComponent';
+import { withTheme } from 'emotion-theming';
+import withLinkWrapper, { WrappedLinkProps } from '../withLinkWrapper';
 import {
   StyledButton,
   StyledPrimaryButton,
   StyledSecondaryButton,
 } from './Button.style';
-import { WrappedLinkProps } from '../../lib/wrapLinkComponent';
-import { withTheme } from 'emotion-theming';
 
 export const Button = (props: WrappedLinkProps) =>
-  wrapLinkComponent(withTheme(StyledButton), props);
+  withLinkWrapper(withTheme(StyledButton), props);
 
 export const PrimaryButton = (props: WrappedLinkProps) =>
-  wrapLinkComponent(withTheme(StyledPrimaryButton), props);
+  withLinkWrapper(withTheme(StyledPrimaryButton), props);
 
 export const SecondaryButton = (props: WrappedLinkProps) =>
-  wrapLinkComponent(withTheme(StyledSecondaryButton), props);
+  withLinkWrapper(withTheme(StyledSecondaryButton), props);
 
 export default Button;

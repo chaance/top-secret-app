@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { WrappedLinkProps } from '../../lib/wrapLinkComponent';
+import { WrappedLinkProps } from '../withLinkWrapper';
 import { ThemeProps } from '../../shared/theme';
 
 // shortcut to our themed button colors
